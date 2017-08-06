@@ -1,0 +1,6 @@
+<input #someValue (keyup.enter)="setSome(someValue.value); someValue.value = ''"><button (click)="setSome(someValue.value); someValue.value = ''">Write Down</button>
+<ul>
+  <li *ngFor="let item of toDolist">
+    {{ item.text }}<a (click)="removeSome(item)">[x]</a>
+  </li>
+</ul>
